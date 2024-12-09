@@ -56,9 +56,6 @@ def get_post(post_id: int) -> None:
     print(f"Вот пост с id {post_id}: {post}")
 
 
-get_post(4)
-
-
 def update_post(post_id: int, new_title: str = None, new_content: str = None) -> None:
     update_post_query = """
     UPDATE posts
@@ -82,6 +79,3 @@ def update_post(post_id: int, new_title: str = None, new_content: str = None) ->
         print(f"Пост с id {post_id} успешно обновлен")
     else:
         print(f"Пост с id {post_id} не найден или не были изменены значения")
-
-
-update_post(4, "успешно обновлен")
